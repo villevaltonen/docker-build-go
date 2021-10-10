@@ -11,7 +11,7 @@ import (
 func main() {
 	r := mux.NewRouter()
 	r.HandleFunc("/api/hello", hello())
-	log.Println("Starting an HTTP-server...")
+	log.Println("HTTP-server is starting...")
 	err := http.ListenAndServe(":8080", r)
 	if err != nil {
 		log.Fatal(err)
