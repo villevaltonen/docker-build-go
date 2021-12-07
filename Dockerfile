@@ -16,6 +16,6 @@ FROM alpine:3.14
 COPY --from=builder /app/main /bin/main
 
 RUN adduser --disabled-password -u 1000 user
-USER user
+USER 1000 
 
 ENTRYPOINT [ "/bin/main"]
